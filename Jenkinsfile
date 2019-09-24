@@ -10,7 +10,8 @@ pipeline {
         steps {
           withAWS(region:'us-west-2', credentials:'peterpCredentials') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'peterp-bucket-003-jenkins')
-      }
+          }
+        }
     }
   }
 }
